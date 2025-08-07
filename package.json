@@ -1,0 +1,11 @@
+{
+  "name": "soul-engine-backend",
+  "version": "1.0.0",
+  "description": "Backend for Soul Engine",
+  "main": "api/create-art.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "openai": "^4.28.0"
+  }
+}
