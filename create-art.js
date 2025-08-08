@@ -4,9 +4,11 @@
 
 import express from 'express';
 import OpenAI from 'openai';
+import cors from 'cors'; // <-- 1. IMPORT THE CORS PACKAGE
 
 const app = express();
 app.use(express.json());
+app.use(cors()); // <-- 2. TELL THE APP TO USE CORS
 
 // IMPORTANT: Store your API key in an environment variable, NOT in the code.
 const openai = new OpenAI({
@@ -45,12 +47,5 @@ app.post('/api/create-art', async (req, res) => {
 });
 
 // This makes the script runnable
-// On a platform like Vercel, this file would be automatically handled.
-// For local testing:
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// To run this locally:
-// 1. Install dependencies: npm install express openai
-// 2. Set your environment variable: export OPENAI_API_KEY='your_new_secret_key'
-// 3. Run the server: node api/create-art.js

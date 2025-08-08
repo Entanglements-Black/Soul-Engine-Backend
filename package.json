@@ -5,6 +5,7 @@
   "main": "api/create-art.js",
   "type": "module",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "openai": "^4.28.0"
   }
