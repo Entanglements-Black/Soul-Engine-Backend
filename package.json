@@ -1,12 +1,16 @@
 {
-  "name": "soul-engine-backend",
+  "name": "soul-engine-backend-gemini",
   "version": "1.0.0",
-  "description": "Backend for Soul Engine",
+  "description": "Backend for Soul Engine, powered by Gemini",
   "main": "api/create-art.js",
   "type": "module",
+  "scripts": {
+    "start": "node api/create-art.js"
+  },
   "dependencies": {
+    "@google/generative-ai": "^0.14.1",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "openai": "^4.28.0"
+    "express": "^4.19.2"
   }
 }
+
